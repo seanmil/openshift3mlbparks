@@ -28,6 +28,7 @@ public class MLBParkResource {
 
 	private DBCollection getMLBParksCollection() {
 		DB db = dbConnection.getDB();
+                db.checkDB();
 		DBCollection parkListCollection = db.getCollection("teams");
 
 		return parkListCollection;

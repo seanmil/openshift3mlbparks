@@ -64,6 +64,10 @@ public class DBConnection {
 		return mongoDB;
 	}
 
+	public void checkDB() {
+		this.initDatabase(mongoDB);
+	}
+
 	private void initDatabase(DB mongoDB) {
 		DBCollection parkListCollection = mongoDB.getCollection("teams");
 		int teamsImported = 0;
